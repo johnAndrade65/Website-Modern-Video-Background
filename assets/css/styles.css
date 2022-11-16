@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 /*==GENERAL STYLIZATION==*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,10 +10,10 @@
 }
 
 /*==CONTAINER==*/
-.container{
+.container {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(12,3,51,0.3), rgba(12,3,51,0.3));
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
     position: relative;
     padding: 0 5%;
     display: flex;
@@ -22,7 +22,7 @@
 }
 
 /*==BACKGROUND==*/
-.bg-video{
+.bg-video {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -30,7 +30,7 @@
 }
 
 /*==HEADER MENU==*/
-nav{
+nav {
     width: 100%;
     position: absolute;
     top: 0;
@@ -41,40 +41,58 @@ nav{
     justify-content: space-between;
 }
 
-nav .logo{
+nav .logo {
     width: 80px;
 }
-nav ul li{
+
+nav ul li {
     list-style: none;
     display: inline-block;
     margin-left: 40px;
+    margin-right: 10px;
+    position: relative;
+    left: 150px;
 }
-nav ul li a{
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
     border-bottom: 2px solid transparent;
     font-size: 17px;
     transition: 0.4s;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     border-bottom: 2px solid #fff;
 }
 
+.menuIcon div {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(253, 253, 253);
+    margin: 6px 0;
+    position: relative;
+    display: none;
+}
+
 /*==CONTENT==*/
-.content{
+.content {
     text-align: center;
 }
-.content h1{
+
+.content h1 {
     color: #fff;
     font-size: 160px;
     font-weight: 600;
     transition: 0.5s;
 }
-.content h1:hover{
+
+.content h1:hover {
     -webkit-text-stroke: 2px #fff;
     color: transparent;
 }
-.content a{
+
+.content a {
     color: #fff;
     text-decoration: none;
     display: inline-block;
@@ -85,22 +103,110 @@ nav ul li a:hover{
     margin-top: 20px;
     transition: 0.5s;
 }
-.content a:hover{
+
+.content a:hover {
     font-weight: 500;
     color: rgb(2, 82, 148);
     background: #fff;
 }
 
 /*==MAXIMUM ASPECT RATE IS MINIMUM==*/
-@media (min-aspect-ratio: 16/9){
-    .bg-video{
+@media (min-aspect-ratio: 16/9) {
+    .bg-video {
         width: 100%;
         height: auto;
     }
 }
-@media (max-aspect-ratio: 16/9){
-    .bg-video{
+
+@media (max-aspect-ratio: 16/9) {
+    .bg-video {
         width: auto;
         height: 100%;
+    }
+}
+
+/*==ADJUSTABLE SCREEN SIZE==*/
+@media (max-width:955px) {
+    nav ul li {
+        left: 80px;
+    }   
+}
+@media (max-width:820px) {
+    nav ul li {
+        display: none;
+    }
+
+    .menuIcon div {
+        width: 35px;
+        height: 5px;
+        margin: 6px 0;
+        display: flex;
+    }
+
+    .content h1 {
+        font-size: 120px;
+    }
+
+    .content a {
+        font-size: 22px;
+        padding: 10px 60px;
+        transition: 0.5s;
+    }
+}
+
+@media (max-width:630px) {
+    .menuIcon div {
+        width: 35px;
+        height: 5px;
+        margin: 6px 0;
+        display: flex;
+    }
+
+    .content h1 {
+        font-size: 90px;
+    }
+
+    .content a {
+        font-size: 20px;
+        padding: 10px 60px;
+        transition: 0.5s;
+    }
+}
+
+@media (max-width:550px) {
+    .menuIcon div {
+        width: 35px;
+        height: 5px;
+        margin: 6px 0;
+        display: flex;
+    }
+
+    .content h1 {
+        font-size: 70px;
+    }
+
+    .content a {
+        font-size: 18px;
+        padding: 10px 60px;
+        transition: 0.5s;
+    }
+}
+
+@media (max-width:350px) {
+    .menuIcon div {
+        width: 35px;
+        height: 5px;
+        margin: 6px 0;
+        display: flex;
+    }
+
+    .content h1 {
+        font-size: 50px;
+    }
+
+    .content a {
+        font-size: 15px;
+        padding: 5px 50px;
+        transition: 0.5s;
     }
 }
